@@ -67,12 +67,12 @@ function tentukanJenisBBM(platWarna, jenisKendaraan, kapasitasCC) {
 }
 
 // Contoh pemanggilan fungsi dengan kondisi tertentu
-platWarnaContoh = 'kuning';
-jenisKendaraanContoh = 'motor';
-kapasitasCCContoh = 1200;
+tentukanplatWarna = 'kuning';
+tentukanJenisKendaraan = 'motor';
+tentukanKapasitasCC = 1200;
 
-let jenisBBMContoh = tentukanJenisBBM(platWarnaContoh, jenisKendaraanContoh, kapasitasCCContoh);
-console.log("Plat Warna:", platWarnaContoh, "Jenis Kendaraan:", jenisKendaraanContoh, "CC:", kapasitasCCContoh, "=>", jenisBBMContoh, " //ini menggunakan tenary operator");
+let jenisBBM = tentukanJenisBBM(tentukanplatWarna, tentukanJenisKendaraan, tentukanKapasitasCC);
+console.log("Plat Warna:", tentukanplatWarna, "Jenis Kendaraan:", tentukanJenisKendaraan, "CC:", tentukanKapasitasCC, "=>", jenisBBM, " //ini menggunakan tenary operator");
 
 
 
