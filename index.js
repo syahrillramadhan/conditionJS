@@ -14,7 +14,7 @@ function determineWater(suhu) {
 }
 
 // Contoh pemanggilan fungsi dengan suhu tertentu
-let suhuDetermine = 25;
+let suhuDetermine = 150;
 let waterCondition = determineWater(suhuDetermine);
 console.log("Suhu:", suhuDetermine, "=>", waterCondition, "//ini menggunakan if statement");
 
@@ -41,18 +41,15 @@ function determineTypeBBM(platColor, typeVahichel, capacityCC) {
         return "BBM subsidi";
     } else if (typeVahichel === 'mobil' && capacityCC < 1500) {
         return "PERTAMAX";
-    } else if (typeVahichel === 'mobil' && capacityCC >= 1500) {
-        return "PERTAMAX Turbo";
     } else {
-        return "Jenis kendaraan tidak dikenali";
+        return "Pertamax Turbo"
     }
-    
 }
 
 // Contoh pemanggilan fungsi dengan kondisi tertentu
-determinePlatcolors = 'hitam';
-determineTypeahichels = 'mobil';
-determineCapacityCC = 100;
+determinePlatcolors = 'putih';
+determineTypeahichels = 'Mobil';
+determineCapacityCC = 1000;
 let typeBBM = determineTypeBBM(determinePlatcolors, determineTypeahichels, determineCapacityCC);
 console.log("Plat warna:", determinePlatcolors,"Jenis Kendaraan:", determineTypeahichels,"CC:", determineCapacityCC, "=>", typeBBM, "//ini menggunakan if statement" );
 
@@ -67,12 +64,10 @@ function tentukanJenisBBM(platWarna, jenisKendaraan, kapasitasCC) {
 }
 
 // Contoh pemanggilan fungsi dengan kondisi tertentu
-tentukanplatWarna = 'kuning';
+tentukanplatWarna = 'Hitam';
 tentukanJenisKendaraan = 'mobil';
-tentukanKapasitasCC = 1200;
+tentukanKapasitasCC = 2000;
 
 let jenisBBM = tentukanJenisBBM(tentukanplatWarna, tentukanJenisKendaraan, tentukanKapasitasCC);
 console.log("Plat Warna:", tentukanplatWarna, "Jenis Kendaraan:", tentukanJenisKendaraan, "CC:", tentukanKapasitasCC, "=>", jenisBBM, " //ini menggunakan tenary operator");
-
-
 
