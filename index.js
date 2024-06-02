@@ -1,73 +1,42 @@
 // Home work week 3 - Learning javascript
 // Soal 1
 // - Tentukan letiabel apa saja yang dibutuhkan
-function determineWater(suhu) {
-    if (suhu >= -100 && suhu <= 0) {
-        return "Air dalam bentuk beku";
-    } else if (suhu >= 1 && suhu <= 100) {
-        return "Air dalam bentuk cair";
-    } else if (suhu >= 101 && suhu <= 500) {
-        return "Air dalam bentuk uap";
-    } else {
-        return "Suhu diluar rentang yang ditentukan, keadaan tidak terdefinisi";
-    }
-}
-
+const determineWater = (temperature) => {
+  if (temperature >= -100 && temperature <= 0) {
+    return "Air dalam bentuk beku";
+  } else if (temperature >= 1 && temperature <= 100) {
+    return "Air dalam bentuk cair";
+  } else if (temperature >= 101 && temperature <= 500) {
+    return "Air dalam bentuk uap";
+  } else {
+    return "Suhu diluar rentang yang ditentukan, keadaan tidak terdefinisi";
+  }
+};
 // Contoh pemanggilan fungsi dengan suhu tertentu
-let suhuDetermine = 150;
+let suhuDetermine = 550;
 let waterCondition = determineWater(suhuDetermine);
-console.log("Suhu:", suhuDetermine, "=>", waterCondition, "//ini menggunakan if statement");
-
-
-// Use ternary operator soal 1
-function tentukanKeadaanAir(suhu) {
-    return (suhu >= -100 && suhu <= 0) ?
-        "Air dalam bentuk beku" :
-        (suhu >= 1 && suhu <= 100)  ?
-        "Air dalam bentuk cair" :
-        (suhu >= 101 && suhu <= 500) ?
-        "Air dalam bentuk uap":
-        "Suhu diluar rentang yang ditentukan, keadaan tidak terdefinisi";
-}
-
-let tentukanSuhu = 25;
-let kondisiAir = tentukanKeadaanAir(tentukanSuhu);
-console.log("Suhu:", tentukanSuhu, "=>", kondisiAir, "//ini menggunakan tenary operator");
-
+console.log(`Suhu: ${suhuDetermine} air dalam bentuk ${waterCondition}`);
 
 //Soal 2 If statement
-function determineTypeBBM(platColor, typeVahichel, capacityCC) {
-    if (platColor === "kuning" || typeVahichel === "motor") {
-        return "BBM subsidi";
-    } else if (typeVahichel === 'mobil' && capacityCC < 1500) {
-        return "PERTAMAX";
-    } else {
-        return "Pertamax Turbo"
-    }
-}
+const determineTypeBBM = (platColor, typeVahichel, capacityCC) => {
+  if (platColor === "kuning" || typeVahichel === "motor") {
+    return "BBM subsidi";
+  } else if (typeVahichel === "mobil" && capacityCC < 1500) {
+    return "PERTAMAX";
+  } else {
+    return "Pertamax Turbo";
+  }
+};
 
 // Contoh pemanggilan fungsi dengan kondisi tertentu
-determinePlatcolors = 'putih';
-determineTypeahichels = 'Mobil';
-determineCapacityCC = 1000;
-let typeBBM = determineTypeBBM(determinePlatcolors, determineTypeahichels, determineCapacityCC);
-console.log("Plat warna:", determinePlatcolors,"Jenis Kendaraan:", determineTypeahichels,"CC:", determineCapacityCC, "=>", typeBBM, "//ini menggunakan if statement" );
-
-
-// soal 2 tenary operator
-function tentukanJenisBBM(platWarna, jenisKendaraan, kapasitasCC) {
-    return (platWarna === 'kuning' || jenisKendaraan === 'motor') ?
-        "BBM subsidi" :
-        (jenisKendaraan === 'mobil' && kapasitasCC < 1500) ?
-        "PERTAMAX" :
-        "PERTAMAX Turbo";
-}
-
-// Contoh pemanggilan fungsi dengan kondisi tertentu
-tentukanplatWarna = 'Hitam';
-tentukanJenisKendaraan = 'mobil';
-tentukanKapasitasCC = 2000;
-
-let jenisBBM = tentukanJenisBBM(tentukanplatWarna, tentukanJenisKendaraan, tentukanKapasitasCC);
-console.log("Plat Warna:", tentukanplatWarna, "Jenis Kendaraan:", tentukanJenisKendaraan, "CC:", tentukanKapasitasCC, "=>", jenisBBM, " //ini menggunakan tenary operator");
-
+determinePlatcolors = "hitam";
+determineTypeahichels = "mobil";
+determineCapacityCC = 2000;
+let typeBBM = determineTypeBBM(
+  determinePlatcolors,
+  determineTypeahichels,
+  determineCapacityCC
+);
+console.log(
+  `Plat warna: ${determinePlatcolors}, Jenis Kendaraan: ${determineTypeahichels}, CC: ${determineCapacityCC}, tipe BBM ${typeBBM}`
+);
